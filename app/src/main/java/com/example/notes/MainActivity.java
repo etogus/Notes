@@ -1,4 +1,4 @@
-package com.example.easytutonotes;
+package com.example.notes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,6 +7,7 @@ import io.realm.Realm;
 import io.realm.RealmChangeListener;
 import io.realm.RealmResults;
 import io.realm.Sort;
+import notes.R;
 
 import android.content.Intent;
 import android.os.Bundle;

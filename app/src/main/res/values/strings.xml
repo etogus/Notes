@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">EasyTutoNotes</string>
+    <string name="app_name">Notes</string>
+    <string name="title">Заголовок</string>
+    <string name="description">Описание</string>
+    <string name="save_note">Сохранить заметку</string>
+    <string name="add_new_note">Добавить заметку</string>
 </resources>

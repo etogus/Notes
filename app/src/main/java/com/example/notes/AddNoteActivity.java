@@ -1,7 +1,8 @@
-package com.example.easytutonotes;
+package com.example.notes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import io.realm.Realm;
+import notes.R;
 
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +39,7 @@ public class AddNoteActivity extends AppCompatActivity {
                 note.setDescription(description);
                 note.setCreatedTime(createdTime);
                 realm.commitTransaction();
-                Toast.makeText(getApplicationContext(),"Note saved",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Заметка сохранена",Toast.LENGTH_SHORT).show();
                 finish();
 
 
