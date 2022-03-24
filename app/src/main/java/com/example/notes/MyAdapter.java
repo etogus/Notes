@@ -30,7 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_view,parent,false));
+        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_view, parent, false));
     }
 
     @Override
@@ -39,8 +39,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.titleOutput.setText(note.getTitle());
         holder.descriptionOutput.setText(note.getDescription());
 
-        String formatedTime = DateFormat.getDateTimeInstance().format(note.getCreatedTime());
-        holder.timeOutput.setText(formatedTime);
+        String formattedTime = DateFormat.getDateTimeInstance().format(note.getCreatedTime());
+        holder.timeOutput.setText(formattedTime);
 
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -52,7 +52,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         if(item.getTitle().equals("Удалить")){
-                            //delete the note
                             Realm realm = Realm.getDefaultInstance();
                             realm.beginTransaction();
                             note.deleteFromRealm();
@@ -63,11 +62,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     }
                 });
                 menu.show();
-
                 return true;
             }
         });
-
     }
 
     @Override
@@ -75,7 +72,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return notesList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView titleOutput;
         TextView descriptionOutput;

@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#00B0FF"
-    android:padding="20dp"
-    tools:context=".AddNoteActivity">
+    android:padding="20dp">
 
     <TextView
         android:layout_width="match_parent"

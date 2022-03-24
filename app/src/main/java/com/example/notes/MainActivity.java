@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         MaterialButton addNoteBtn = findViewById(R.id.addnewnotebtn);
 
         addNoteBtn.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         RealmResults<Note> notesList = realm.where(Note.class).findAllSorted("createdTime", Sort.DESCENDING);
 
-
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         MyAdapter myAdapter = new MyAdapter(getApplicationContext(),notesList);
@@ -49,7 +47,5 @@ public class MainActivity extends AppCompatActivity {
                 myAdapter.notifyDataSetChanged();
             }
         });
-
-
     }
 }

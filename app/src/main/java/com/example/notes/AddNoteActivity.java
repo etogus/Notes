@@ -22,7 +22,6 @@ public class AddNoteActivity extends AppCompatActivity {
         EditText descriptionInput = findViewById(R.id.descriptioninput);
         MaterialButton saveBtn = findViewById(R.id.savebtn);
 
-
         Realm.init(getApplicationContext());
         Realm realm = Realm.getDefaultInstance();
 
@@ -41,11 +40,7 @@ public class AddNoteActivity extends AppCompatActivity {
                 realm.commitTransaction();
                 Toast.makeText(getApplicationContext(),"Заметка сохранена",Toast.LENGTH_SHORT).show();
                 finish();
-
-
             }
         });
-
-
     }
 }
